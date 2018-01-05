@@ -64,11 +64,11 @@ public class PartyPlanning {
         }
 
         int couponBenefit = 0;
-        if (couponNumber == "1234") {
-            if ((guestCount >= 150) && (entertainment == "dj")) {
+        if (couponNumber.equals("1234")) {
+            if ((guestCount >= 150) && (entertainment.equals("dj"))) {
                 entertainmentCost = 0;
             }
-        } else if (couponNumber == "5678") {
+        } else if (couponNumber.equals("5678")) {
             couponBenefit = 50;
         } else {}
 
