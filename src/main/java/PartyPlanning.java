@@ -1,8 +1,10 @@
 public class PartyPlanning {
     int guestCount;
     String entertainment;
-    String[] food;
-    String[] drinks;
+    String food;
+    String drinks;
+    String couponNumber = "";
+    int cost = 0;
 
     public int getGuestCount() {
         return guestCount;
@@ -10,14 +12,18 @@ public class PartyPlanning {
     public String getEntertainment() {
         return entertainment;
     }
-    public String[] getFood() {
+    public String getFood() {
         return food;
     }
-    public String[] getDrinks() {
+    public String getDrinks() {
         return drinks;
     }
 
-    PartyPlanning(int inputGuestCount, String inputEntertainment, String[] inputFood, String[] inputDrinks) {
+    public void setCouponNumber(String cn) {
+        couponNumber = cn;
+    }
+
+    PartyPlanning(int inputGuestCount, String inputEntertainment, String inputFood, String inputDrinks) {
         guestCount = inputGuestCount;
         entertainment = inputEntertainment;
         food = inputFood;
@@ -25,6 +31,50 @@ public class PartyPlanning {
     }
 
     public int calculateCost() {
-        return 0;
+        int foodCostPerPerson;
+        int drinksCostPerPerson;
+        int entertainmentCost;
+
+        switch (food) {
+            case "budget": foodCostPerPerson = 10;
+                break;
+            case "standard": foodCostPerPerson = 20;
+                break;
+            case "premium": foodCostPerPerson = 30;
+                break;
+            default: foodCostPerPerson = 0;
+        }
+
+        switch (drinks) {
+            case "budget": drinksCostPerPerson = 10;
+                break;
+            case "standard": drinksCostPerPerson = 20;
+                break;
+            case "premium": drinksCostPerPerson = 30;
+                break;
+            default: drinksCostPerPerson = 0;
+        }
+
+        switch (entertainment) {
+            case "dj": entertainmentCost = 100;
+                break;
+            case "band": entertainmentCost = 200;
+                break;
+            default: entertainmentCost = 0;
+        }
+
+        int couponBenefit = 0;
+        if (couponNumber == "1234") {
+            if ((guestCount >= 150) && (entertainment == "dj")) {
+                entertainmentCost = 0;
+            }
+        } else if (couponNumber == "5678") {
+            couponBenefit = 50;
+        } else {}
+
+        int costPerPerson = foodCostPerPerson + drinksCostPerPerson;
+        cost = guestCount * costPerPerson + entertainmentCost - couponBenefit;
+
+        return cost;
     }
 }
