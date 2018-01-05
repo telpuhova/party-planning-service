@@ -17,5 +17,14 @@ public class PartyPlanning {
         return drinks;
     }
 
-    
+    PartyPlanning(int inputGuestCount, String inputEntertainment, String[] inputFood, String[] inputDrinks) {
+        guestCount = inputGuestCount;
+        entertainment = inputEntertainment;
+        food = inputFood;
+        drinks = inputDrinks;
+    }
+
+    public int calculateCost() {
+        return 0;
+    }
 }
