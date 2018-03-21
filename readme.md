@@ -1,12 +1,12 @@
-# _party planning service_
+# party planning service
 
-#### _web application for party planning, 1/5/2018_
+web application for party planning, 1/5/2018
 
-#### By _**telpuhova**_
+**By Natalia Telpukhova**
 
 ## Description
 
-_Web application that prompts user for party details and returns the estimated cost._
+Web application that prompts user for party details and returns the estimated cost.
 
 ### Specs
 | Behavior | Input | Output |
@@ -22,11 +22,11 @@ _Web application that prompts user for party details and returns the estimated c
 
 ## Setup
 
-* _clone repository_
-* _run App.java_
+* clone repository
+* run App.java
 
 ## Technologies Used
 
-_Java_
+Java
 
-Copyright (c) 2017 **_telpuhova_**
+Copyright (c) 2017 Natalia Telpukhova
