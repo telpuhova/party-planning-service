@@ -29,4 +29,4 @@ Web application that prompts user for party details and returns the estimated co
 
 Java
 
-Copyright (c) 2017 Natalia Telpukhova
+Copyright (c) 2018 Natalia Telpukhova
